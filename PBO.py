@@ -18,10 +18,10 @@ class Jurusan:
         self.NamaJurusan = nama_jurusan
         self.DaftarMahasiswa = []
     
-    def tambah_mahasiswa(self, mahasiswa):
+    def add_mahasiswa(self, mahasiswa):
         self.DaftarMahasiswa.append(mahasiswa)
     
-    def tampilkan_daftar_mahasiswa(self):
+    def show_daftar_mahasiswa(self):
         print("Daftar Mahasiswa di Jurusan", self.NamaJurusan)
         for mahasiswa in self.DaftarMahasiswa:
             print("Nama: ", mahasiswa.nama)
@@ -34,10 +34,10 @@ class Universitas:
         self.NamaUniversitas = nama_universitas
         self.DaftarJurusan = []
     
-    def tambah_jurusan(self, jurusan):
+    def add_jurusan(self, jurusan):
         self.DaftarJurusan.append(jurusan)
     
-    def tampilkan_daftar_jurusan(self):
+    def show_daftar_jurusan(self):
         print("Daftar Jurusan di Universitas", self.NamaUniversitas)
         for jurusan in self.DaftarJurusan:
             print(jurusan.NamaJurusan)
@@ -49,14 +49,14 @@ universitas_xyz = Universitas("XYZ University")
 
 # 3. Membuat objek Jurusan dengan nama "Teknik Informatika" dan menambahkannya ke dalam Universitas XYZ
 jurusan_ti = Jurusan("Teknik Informatika")
-universitas_xyz.tambah_jurusan(jurusan_ti)
+universitas_xyz.add_jurusan(jurusan_ti)
 
 # 4. Membuat objek Mahasiswa dengan nama dan NIM masinh-masing, dan memasukkannya ke dalam Jurusan Teknik Informatika di Universitas XYZ
 mahasiswa1 = Mahasiswa("Anissa Shanniyah Aprilia", "G1A022044", jurusan_ti)
-jurusan_ti.tambah_mahasiswa(mahasiswa1)
+jurusan_ti.add_mahasiswa(mahasiswa1)
 
 # 5. Menampilkan daftar jurusan yang ada di Universitas XYZ
-universitas_xyz.tampilkan_daftar_jurusan()
+universitas_xyz.show_daftar_jurusan()
 
 # 6. Menampilkan daftar mahasiswa yang terdaftar dalam Jurusan Teknik Informatika di Universitas XYZ
-jurusan_ti.tampilkan_daftar_mahasiswa()
+jurusan_ti.show_daftar_mahasiswa()
